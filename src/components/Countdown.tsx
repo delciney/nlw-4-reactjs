@@ -2,7 +2,11 @@ import styles from "../styles/components/Countdown.module.css"
 
 const Countdown: React.FC = () => {
   return (
-      <div className={styles.CountdownContainer}>
+      <div>
+          
+      <div 
+      className={styles.CountdownContainer}
+      >
           <div>
               <span>2</span>
               <span>5</span>
@@ -12,6 +16,12 @@ const Countdown: React.FC = () => {
               <span>0</span>
               <span>0</span>
           </div>
+      </div>
+      <button type="button"
+      className={styles.CountdownButton}
+      >
+          Iniciar um ciclo
+      </button>
       </div>
   )
 }
