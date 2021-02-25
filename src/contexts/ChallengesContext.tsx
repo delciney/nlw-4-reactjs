@@ -70,7 +70,7 @@ export const ChallengesProvider: React.FC = ({children}: ChallengesProviderProps
 
         if(finalExperience >= experienceToNextLevel){
             finalExperience = finalExperience - experienceToNextLevel
-            levelUp
+            levelUp()
         }
 
         setCurrentExperience(finalExperience)
