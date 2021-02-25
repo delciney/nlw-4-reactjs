@@ -5,21 +5,20 @@ import styles from "../styles/components/ChallengeBox.module.css"
 
 const ChallengeBox: React.FC = () => {
     
-    const contextData = useContext(ChallengesContext)
-    const hasActiveChallenge = true
+    const { activeChallenges } = useContext(ChallengesContext)
     
     return (
         <div className={styles.ChallengeBoxContainer}>
             {
-                hasActiveChallenge ? (
+                activeChallenges ? (
 
                     <div className={styles.ChallengeActive}>
-                        <header>Ganhe 400 xp</header>
+                        <header>Ganhe {activeChallenges.amount} xp</header>
                         
                         <main>
-                            <img src="icons/body.svg" />
+                            <img src={`icons/${activeChallenges.type}.svg`} />
                             <strong>Novo desafio</strong>
-                            <p>Levante e faça uma caminhada de 3 minutos</p>
+                            <p>{activeChallenges.description}</p>
                         </main>
 
                         <footer>
